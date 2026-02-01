@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
+import { cubicBezier, motion, Variants } from 'framer-motion';
 
 const Footer = () => {
     const containerVariants: Variants = {
@@ -21,7 +21,7 @@ const Footer = () => {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+            transition: { duration: 0.8, ease: cubicBezier(0.22, 1, 0.36, 1) }
         }
     };
 
